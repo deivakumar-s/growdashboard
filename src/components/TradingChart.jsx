@@ -56,10 +56,10 @@ const TradingChart = () => {
         },
         responsive: [
           {
-            breakpoint: 768, // Tablet and below
+            breakpoint: 768, 
             options: {
               yaxis: {
-                show: false, // 👈 Completely hide Y-axis on small screens
+                show: false, 
               },
             },
           },
@@ -71,16 +71,13 @@ const TradingChart = () => {
 
   return (
     <div className="flex   text-white">
-      {/* Sidebar */}
       <div className="w-12 mt-2 lg:mt-10 flex flex-col items-center py-3 space-y-3 shadow-lg text-gray-400 ">
         {[Crosshair, Spline, WrapText, Brush, AlignEndHorizontal, ListCollapse, Type, Magnet, Slice, ZoomIn, PencilRuler, LockKeyholeOpen, Eye].map((Icon, idx) => (
           <Icon key={idx} size={18} className="hover:text-white cursor-pointer" />
         ))}
       </div>
 
-      {/* Main Content */}
       <div className="flex-1 flex flex-col">
-        {/* Navbar */}
         <div className="w-full  h-10 flex items-center  lg:px-4 shadow-sm text-gray-300 text-xs">
           <ul className="flex items-center text-xs lg:text-sm gap-1 lg:gap-3 ">
             <li className="font-semibold text-white">BTC/USDT</li>
@@ -99,27 +96,22 @@ const TradingChart = () => {
             <li className="hover:text-white cursor-pointer">Compare</li>
           </ul>
 
-          {/* Right-aligned icons */}
           <ul className="flex items-center gap-3 ml-auto">
             <li className="hover:text-white cursor-pointer"><Camera size={16} /></li>
             <li className="hover:text-white cursor-pointer"><Settings size={16} /></li>
           </ul>
         </div>
 
-        {/* Chart Area */}
         <div className="flex-1">
           <div className="bg-[#0f0f0f] lg:p-4 rounded-xl shadow-lg">
-            {/* Controls */}
           
 
-            {/* Chart */}
             <ReactApexChart
         options={options}
         series={[{ data: sampleData }]}
         type="candlestick"
         height={300}
       />
-      {/* Time Range Buttons */}
 <div className="flex justify-start gap-2 mt-2">
   {['1D', '5D', '1M', '3M', '6M', 'YTD', '1Y', '5Y', 'ALL'].map((range) => (
     <button

@@ -5,7 +5,6 @@ const InfoDetails = () => {
   return (
     <div className="w-full bg-[#111] px-4 py-2 border-b border-gray-800 text-white flex justify-center ">
       <div className="w-full max-w-[1200px] flex flex-wrap items-center gap-6 md:gap-10">
-        {/* Star + Pair + Price */}
         <div className="flex items-start gap-4 flex-wrap">
           <Star size={16} className="text-white fill-white mt-1" />
 
@@ -26,11 +25,9 @@ const InfoDetails = () => {
           </div>
         </div>
 
-        {/* Divider line */}
         <div className="w-full h-px bg-gray-700 md:hidden"></div>
         <div className="hidden md:block w-px h-8 bg-gray-700"></div>
 
-        {/* Market Stats */}
         <div className="flex flex-wrap gap-6 text-xs text-gray-400">
           <div className="flex flex-col">
             <span>24h Change</span>

@@ -35,7 +35,6 @@ const TradePanel = () => {
 
   return (
     <div className="bg-[#1a1a1a] text-white rounded-md text-sm border border-[#2a2a2a] p-2 h-full">
-      {/* Search Bar */}
       <div className="mb-2">
         <input
           type="text"
@@ -44,7 +43,6 @@ const TradePanel = () => {
         />
       </div>
 
-      {/* Token Tabs */}
       <div className="flex border-b border-[#333] text-xs">
         {tokens.map((token) => (
           <div
@@ -61,31 +59,25 @@ const TradePanel = () => {
         ))}
       </div>
 
-      {/* Market List */}
       <div className="py-2 w-full">
-  {/* Header Row */}
   <div className="grid grid-cols-3 text-xs  text-gray-400 px-2 mt-2 mb-1">
     <div className='text-left'>Change</div>
     <div className='text-right'>Price</div>
     <div className='text-right'>Change</div>
   </div>
 
-  {/* Data Rows */}
   {marketList.map((item, index) => (
     <div key={index} className="grid grid-cols-3 items-center  text-xs py-1 hover:bg-[#262626] transition">
-      {/* Pair Column */}
       <div className="flex items-center text-left justify-center text-xs whitespace-nowrap gap-1">
   <Star size={26} className="text-white fill-white" />
   <span className='text-xs'>{item.pair}</span>
 </div>
 
 
-      {/* Price Column */}
       <div className={`text-right ${item.isPositive ? 'text-green-500' : 'text-red-500'}`}>
         {item.price}
       </div>
 
-      {/* Change Column */}
       <div className={`text-xs text-right ${item.isPositive ? 'text-green-500' : 'text-red-500'}`}>
         {item.change}
       </div>
@@ -94,7 +86,6 @@ const TradePanel = () => {
 </div>
 
 
-      {/* Trades Tabs */}
       <div className="flex mt-2 border-t border-[#333]">
         {['Market Trades', 'My Trades'].map((tab) => (
           <div
@@ -111,7 +102,6 @@ const TradePanel = () => {
         ))}
       </div>
 
-      {/* Trades Table */}
       <div className="text-xs text-gray-400 grid grid-cols-3 px-2 mt-2 mb-1">
         <div>Price (USDT)</div>
         <div className='text-right'>Amount (BTC)</div>

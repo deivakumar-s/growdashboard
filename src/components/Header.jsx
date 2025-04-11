@@ -87,13 +87,11 @@ const Header = () => {
 
         </div>
 
-        {/* Right Side */}
         <div className="hidden lg:flex items-center gap-4">
           <button className="bg-[#0de292] text-black px-4 py-1 rounded-md text-sm font-medium flex items-center gap-1">
             <CircleArrowDown size={16} /> Deposit
           </button>
           <span className="text-sm cursor-pointer">Assets</span>
-          {/* Vertical Divider */}
           <div className="hidden lg:block w-px h-6 bg-gray-600" />
           <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-[#0de292]">
             <User size={16} />
@@ -106,7 +104,6 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile toggle */}
         <div className="lg:hidden">
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -114,7 +111,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden mt-4 px-2 py-2 bg-[#161616] rounded-md shadow-md">
           {navItems.map((item) => (

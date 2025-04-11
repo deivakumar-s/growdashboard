@@ -56,7 +56,7 @@ const TradingForm = () => {
         <button className="w-full bg-teal-500 text-white rounded p-1.5 text-sm">Buy</button>
       </div>
 
-      {/* Sell Side */}
+    
       <div className="rounded-md p-3 w-full md:w-1/2 text-sm space-y-4">
         <h2 className="text-white font-medium">Avbl - 0.000000 USDT</h2>
 
